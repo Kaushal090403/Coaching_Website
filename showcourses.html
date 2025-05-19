@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Courses page</h1>
+    <a href="{% url 'addcourses' %}">Add courses</a>
+    <br><br>
+    <table border="4" style="width: 30%; text-align: center;">
+        {% for d in data %}
+            <tr>
+                <td>{{ d.cno }}</td>
+                <td>{{ d.cname }}</td>
+                <td>{{ d.cfees }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

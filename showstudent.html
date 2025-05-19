@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Student page</h1>
+    <a href="{% url 'addstudent' %}">Add Student</a>
+    <br><br>
+    <table border="4" style="width: 30%; text-align: center;">
+        {% for d in data %}
+            <tr>
+                <td>{{ d.rno }}</td>
+                <td>{{ d.name }}</td>
+                <td>{{ d.course }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
